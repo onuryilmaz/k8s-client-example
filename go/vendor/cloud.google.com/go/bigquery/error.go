@@ -30,7 +30,7 @@ func (e Error) Error() string {
 	return fmt.Sprintf("{Location: %q; Message: %q; Reason: %q}", e.Location, e.Message, e.Reason)
 }
 
-func bqToError(ep *bq.ErrorProto) *Error {
+func errorFromErrorProto(ep *bq.ErrorProto) *Error {
 	if ep == nil {
 		return nil
 	}
