@@ -42,10 +42,10 @@ all:
 	@echo $(OSFLAG) - $(GOOS) - $(GOARCH)
 
 build: clean
-	docker run -v ${PWD}:/go/src/github.com/onuryilmaz/k8s-client-example/go -w /go/src/github.com/onuryilmaz/k8s-client-example/go -e GOOS=$(GOOS) -e GOARCH=$(GOARCH) golang:1.9.5 go build -v -o go-client
+	docker run -v ${PWD}:/go/src/github.com/onuryilmaz/k8s-client-example/go -w /go/src/github.com/onuryilmaz/k8s-client-example/go -e GOOS=$(GOOS) -e GOARCH=$(GOARCH) golang:1.9.5 go build -v -o client
 
 clean:
-	rm -rf go-client
+	rm -rf client
 
 docker-build:
 	docker build -t onuryilmaz/k8s-client-example:go .
