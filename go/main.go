@@ -32,7 +32,7 @@ func main() {
 	// Use the current context in kubeconfig
 	if *kubeconfig != "" {
 		config, err = clientcmd.BuildConfigFromFlags("", *kubeconfig)
-		if err != nil { //
+		if err != nil {
 			// Use in-cluster configuration
 			config, err = rest.InClusterConfig()
 			if err != nil {
