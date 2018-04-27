@@ -10,6 +10,6 @@ while True:
     print('There are {:d} pods in the cluster:'.format(len(ret.items)))
     
     for i in ret.items:
-        print("%s/%s" % (i.metadata.namespace, i.metadata.name))
+        print('{:s}/{:s}'.format(i.metadata.namespace, i.metadata.name))
     
     time.sleep(10)
