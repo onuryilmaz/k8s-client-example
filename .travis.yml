@@ -7,4 +7,4 @@ jobs:
       script:
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       - cd go && make docker-build docker-push
-      - cd python && make docker-build docker-push
+      - cd ../python && make docker-build docker-push
