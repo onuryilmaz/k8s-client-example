@@ -3,7 +3,8 @@ dist: trusty
 
 jobs:
   include:
-    - stage: build docker image for go client
+    - stage: build and push docker images
       script:
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       - cd go && make docker-build docker-push
+      - cd python && make docker-build docker-push
