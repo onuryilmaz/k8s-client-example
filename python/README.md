@@ -14,7 +14,7 @@ make docker-build
 
 **Docker image for inside the cluster usage:**
 ```
-make k8s-run k8s-logs
+make k8s-run
 ```
 
 ### Dependency Management
